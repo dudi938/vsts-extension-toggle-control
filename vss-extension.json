@@ -1,14 +1,14 @@
 {
     "manifestVersion": 1,
     "id": "toggle-control",
-    "version": "1.0.5",
+    "version": "1.0.9",
     "name": "Toggle control",
     "scopes": [
         "vso.work",
         "vso.work_write"
     ],
     "description": "Interact with your boolean fields with a toggle control.",
-    "publisher": "ms-devlabs",
+    "publisher": "davidgershtenkoren",
     "icons": {
         "default": "img/logo.png"
     },
