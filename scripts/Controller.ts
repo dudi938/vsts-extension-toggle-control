@@ -36,6 +36,7 @@ export class Controller {
                         this._fieldLabel = fieldLabel;
                         this._model = new Model(this._fieldLabel, options, currentValue);
                         this._view = new View(this._model, () => {
+                            console.log('DEBUG allwed values : ' + allowedValues)
                             this._model.toggle();
                             this._updateInternal();
                         }, () => {
@@ -55,6 +56,7 @@ export class Controller {
         return service.getAllowedFieldValues(this._fieldName).then((allowedValues) => 
             service.getFieldValue(this._fieldName).then((currentValue: boolean) => 
                 service.getFields().then((fields) => ({allowedValues, currentValue, fields}))));
+        
     }
 
     private _getFieldInformation(fieldname: string, fields: WitContracts.WorkItemField[]): { isBoolean: boolean, fieldLabel: string } {

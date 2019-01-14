@@ -1,13 +1,13 @@
 {
     "manifestVersion": 1,
-    "id": "toggle-control",
-    "version": "1.0.9",
-    "name": "Toggle control",
+    "id": "severity-control",
+    "version": "1.0.27",
+    "name": "Severity control",
     "scopes": [
         "vso.work",
         "vso.work_write"
     ],
-    "description": "Interact with your boolean fields with a toggle control.",
+    "description": "Interact with your string fields with a Severity control.",
     "publisher": "davidgershtenkoren",
     "icons": {
         "default": "img/logo.png"
@@ -71,14 +71,14 @@
     ],
     "contributions": [
         {
-            "id": "toggle-control-contribution",
+            "id": "severity-control-contribution",
             "type": "ms.vss-work-web.work-item-form-control",
             "description": "Interact with your boolean fields with a toggle control.",
             "targets": [
                 "ms.vss-work-web.work-item-form"
             ],
             "properties": {
-                "name": "Toggle control",
+                "name": "Severity control",
                 "uri": "index.html",
                 "height": 28,
                 "inputs": [
@@ -87,7 +87,7 @@
                         "name": "Select the field for this control (requires a boolean field).",
                         "type": "WorkItemField",
                         "properties": {
-                            "workItemFieldTypes": ["Boolean"]
+                            "workItemFieldTypes": ["String"]
                         },
                         "validation": {
                             "dataType": "String",

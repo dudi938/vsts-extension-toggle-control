@@ -14,20 +14,39 @@ export class View {
     }
 
     public create(): void {
-        this._container = $("<div role='button'> </div>");
+        // this._container = $("<div role='button'> </div>");
+        // this._container.addClass("container");
+        // this._container.attr("tabindex", "0");
+
+        // this._toggle = $("<div> </div>");
+        // this._toggle.addClass("toggle");
+
+        // this._toggleLabel = $("<div> </div>");
+        // this._toggleLabel.addClass("toggleLabel");
+
+        // this._slider = $("<div> </div>");
+        // this._slider.addClass("slider");
+
+        // $("body").empty().append(this._container);
+
+
+       
+        this._container = $("<div role='textbox'> </div>");
         this._container.addClass("container");
         this._container.attr("tabindex", "0");
 
         this._toggle = $("<div> </div>");
-        this._toggle.addClass("toggle");
+        this._toggle.addClass("wrap");
 
         this._toggleLabel = $("<div> </div>");
-        this._toggleLabel.addClass("toggleLabel");
+        this._toggleLabel.addClass("option1");
 
-        this._slider = $("<div> </div>");
-        this._slider.addClass("slider");
+        // <input type="text" id="witc_17_txt" autocomplete="off" title="" maxlength="255" aria-invalid="false" aria-expanded="false" role="combobox" aria-autocomplete="both">
+        this._slider = $("<div class='workitemcontrol work-item-control initialized'><div id='witc_10' class='combo input-text-box list text emptyBorder'><div class='wrap' id='severity'><input type='text' value='blabla' id='witc_10_txt' autocomplete='off' title='' maxlength='255' aria-invalid='false'></div><div class='drop bowtie-icon bowtie-chevron-down-light' role='button' aria-label='Expand'></div></div></div>");
+        // this._slider.addClass("wrap");
 
         $("body").empty().append(this._container);
+
 
         $(this._container).empty().append(this._toggle);
         $(this._container).append(this._toggleLabel);

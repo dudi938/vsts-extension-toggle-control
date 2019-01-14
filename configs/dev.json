@@ -1,5 +1,5 @@
 {
-    "id": "vsts-toggle-control-dev",
-    "name": "Toggle Form Control (dev)",
+    "id": "Severity-control",
+    "name": "Severity Form Control (dev)",
     "public": false
 }
