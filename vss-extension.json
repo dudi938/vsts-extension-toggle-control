@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "severity-control",
-    "version": "1.0.27",
+    "version": "1.0.41",
     "name": "Severity control",
     "scopes": [
         "vso.work",
@@ -95,19 +95,27 @@
                         }
                     },
                     {
-                        "id": "TrueLabel",
-                        "name": "Choose the label for the true value. Example: Accepted",
+                        "id": "FieldName2",
+                        "name": "Select the field for this control (requires a boolean field).",
+                        "type": "WorkItemField",
+                        "properties": {
+                            "workItemFieldTypes": ["String"]
+                        },
                         "validation": {
                             "dataType": "String",
-                            "isRequired": false
+                            "isRequired": true
                         }
                     },
                     {
-                        "id": "FalseLabel",
-                        "name": "Choose the label for the false value. Example: Declined",
+                        "id": "FieldName3",
+                        "name": "Select the field for this control (requires a boolean field).",
+                        "type": "WorkItemField",
+                        "properties": {
+                            "workItemFieldTypes": ["String"]
+                        },
                         "validation": {
                             "dataType": "String",
-                            "isRequired": false
+                            "isRequired": true
                         }
                     }
                 ]

@@ -7,6 +7,8 @@ export class View {
     private _toggle: JQuery;
     private _toggleLabel: JQuery;
     private _slider: JQuery;
+    private _slider1: JQuery;
+    private _slider2: JQuery;
 
     constructor(model: Model, private onToggle: Function, private toggleToTrue: Function, private toggleToFalse: Function) {
         this._model = model;
@@ -42,8 +44,14 @@ export class View {
         this._toggleLabel.addClass("option1");
 
         // <input type="text" id="witc_17_txt" autocomplete="off" title="" maxlength="255" aria-invalid="false" aria-expanded="false" role="combobox" aria-autocomplete="both">
-        this._slider = $("<div class='workitemcontrol work-item-control initialized'><div id='witc_10' class='combo input-text-box list text emptyBorder'><div class='wrap' id='severity'><input type='text' value='blabla' id='witc_10_txt' autocomplete='off' title='' maxlength='255' aria-invalid='false'></div><div class='drop bowtie-icon bowtie-chevron-down-light' role='button' aria-label='Expand'></div></div></div>");
-        // this._slider.addClass("wrap");
+        // this._slider =  $("<div class='workitemcontrol work-item-control initialized'><divclass='combo input-text-box list text emptyBorder'><div class='wrap'  id='severity'><input type='text' value='111' class='severity' autocomplete='off' title='' maxlength='255' aria-invalid='false'></div><div class='drop bowtie-icon bowtie-chevron-down-light' role='button' aria-label='Expand'></div></div></div>");
+        // this._slider1 = $("<div class='workitemcontrol work-item-control initialized'><divclass='combo input-text-box list text emptyBorder'><div class='wrap' id='severity'><input type='text' value='222' class='severity2' autocomplete='off' title='' maxlength='255' aria-invalid='false'></div><div class='drop bowtie-icon bowtie-chevron-down-light' role='button' aria-label='Expand'></div></div></div>");
+        // this._slider2 = $("<div class='workitemcontrol work-item-control initialized'><divclass='combo input-text-box list text emptyBorder'><div class='wrap' id='severity'><input type='text' value='333' class='severity3' autocomplete='off' title='' maxlength='255' aria-invalid='false'></div><div class='drop bowtie-icon bowtie-chevron-down-light' role='button' aria-label='Expand'></div></div></div>");
+
+        this._slider =  $("<input type='text' value='111' class='severity' autocomplete='off' title='' maxlength='255' aria-invalid='false'>");
+        this._slider1 = $("<input type='text' value='222' class='severity2' autocomplete='off' title='' maxlength='255' aria-invalid='false'>");
+        this._slider2 = $("<input type='text' value='333' class='severity3' autocomplete='off' title='' maxlength='255' aria-invalid='false'>");
+        
 
         $("body").empty().append(this._container);
 
@@ -51,6 +59,8 @@ export class View {
         $(this._container).empty().append(this._toggle);
         $(this._container).append(this._toggleLabel);
         $(this._toggle).append(this._slider);
+        $(this._toggle).append(this._slider1);
+        $(this._toggle).append(this._slider2);
 
         this.refresh();
 
